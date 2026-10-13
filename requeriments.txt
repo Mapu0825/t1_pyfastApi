@@ -1,0 +1,6 @@
+# Librerias
+fastApi
+pydantic
+uvicorn
+httpx
+pymongo
