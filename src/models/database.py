@@ -17,6 +17,3 @@ try:
     print("Conexión exitosa a MongoDB")
 except (ConnectionFailure, ServerSelectionTimeoutError) as e:
     print(f"Error de conexión a MongoDB: {e}")
-finally:
-    # Cerrar la conexión al cliente de MongoDB.
-    client.close()
