@@ -4,7 +4,7 @@ from src.models.model import TraineeModel, TraineeUpdateModel
 
 def helper_trainee(trainee) -> dict:
     return {
-        "_id": str(trainee["_id"]),
+        "id": str(trainee["_id"]),
         "document": trainee["document"],
         "firstname": trainee["firstname"],
         "lasname": trainee["lasname"],
@@ -48,7 +48,7 @@ def update_trainee(id: str, data: TraineeUpdateModel):
 
 # Eliminar aprendiz
 def delete_trainee(id: str):
-    trainee = collection.find_one({"id":ObjectId(id)})
+    trainee = collection.find_one({"_id":ObjectId(id)})
     if trainee:
         collection.delete_one({"_id": ObjectId(id)})
         return True
